@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/pantalla"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:autofillHints=""
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="end"
+        android:text="0.0"
+        android:hint="0"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/barradeanterior"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,LabelFor,RtlHardcoded"
+        android:inputType="" />
+
+    <EditText
+        android:id="@+id/barradeanterior"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="resultado"
+        android:autofillHints=""
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="end"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textSize="15pt"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toStartOf="@+id/pantalla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="LabelFor"
+        android:inputType="" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pantalla">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1pt"
+            android:layout_marginBottom="2pt">
+
+            <Button
+                android:id="@+id/Coseno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:background="@color/cientificos"
+                android:onClick="calculaconseno"
+                android:text="Cos" />
+
+            <RadioButton
+                android:id="@+id/binario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/cientificos"
+                android:text="BIN"
+                android:onClick="miraquebotonestapulsado"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+
+            <RadioButton
+                android:id="@+id/decimal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/cientificos"
+                android:text="DEC"
+                android:onClick="miraquebotonestapulsado"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+            <RadioButton
+                android:id="@+id/hexadecimal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/cientificos"
+                android:text="Hex"
+                android:onClick="miraquebotonestapulsado"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/borra"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="BORRA"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/negativopostivo"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="+/-"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/anterior"
+                android:layout_width="53dp"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="anterior"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/botonporcentajes"
+                android:layout_width="38dp"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="%"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/lacoma"
+                android:layout_width="38dp"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text=","
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/igual"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="="
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1pt"
+            android:layout_marginBottom="2pt">
+            <Button
+                android:id="@+id/seno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="calculaseno"
+                android:background="@color/cientificos"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:text="Sin"
+
+                tools:ignore="ButtonStyle" />
+
+
+
+            <Button
+                android:id="@+id/letraA"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/cientificos"
+                android:text="A"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/letraD"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/cientificos"
+                android:text="D"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/letraB"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/cientificos"
+                android:text="B"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/seis"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="6"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/siete"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="7"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/ocho"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="8"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/nueve"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="9"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/cinco"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="5"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/division"
+                android:layout_width="38dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="/"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText">
+
+            </Button>
+
+            <Button
+                android:id="@+id/multplicacion"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="x"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1pt"
+            android:layout_marginBottom="2pt">
+
+            <Button
+
+                android:id="@+id/Tangente"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="calculatangente"
+                android:text="Tan"
+                android:background="@color/cientificos"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt" />
+
+            <Button
+                android:id="@+id/letraE"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/cientificos"
+                android:text="E"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/letraF"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/cientificos"
+                android:text="F"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/letraC"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/cientificos"
+                android:text="C"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+
+            <Button
+                android:id="@+id/cero"
+                android:layout_width="30dp"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="0"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/uno"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="1"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/dos"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="2"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/tres"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="3"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText"
+
+                />
+
+            <Button
+                android:id="@+id/cuatro"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_numero"
+                android:text="4"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/restar"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="-"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/sumar"
+                android:layout_width="15pt"
+                android:layout_height="30pt"
+                android:layout_marginEnd="2pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/botones_calculo"
+                android:text="+"
+                android:onClick="damelosID"
+
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
