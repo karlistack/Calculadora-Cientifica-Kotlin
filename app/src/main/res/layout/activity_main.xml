@@ -37,7 +37,7 @@
         android:ems="10"
         android:gravity="end"
         android:text=""
-        android:hint="resultado"
+        android:hint="@string/operacion"
         android:textAlignment="textEnd"
         android:textSize="14pt"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
