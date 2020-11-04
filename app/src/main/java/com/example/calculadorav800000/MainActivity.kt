@@ -374,7 +374,7 @@ class MainActivity : AppCompatActivity() {
         var seno = findViewById<Button>(view.id)
         if (pantalla.text.toString().isNotEmpty()) {
             pantalla.setText((sin(pantalla.text.toString().toDouble())).toString())
-            barradeanterior.setText("sin  " + seno)
+            barradeanterior.setText("seno")
         }
     }
 
@@ -382,7 +382,7 @@ class MainActivity : AppCompatActivity() {
             var tangente = findViewById<Button>(view.id)
         if (pantalla.text.toString().isNotEmpty()) {
             pantalla.setText((tan(pantalla.text.toString().toDouble())).toString())
-            barradeanterior.setText("tan " + tangente)
+            barradeanterior.setText("tangente ")
 
         }
     }
@@ -391,7 +391,7 @@ class MainActivity : AppCompatActivity() {
             var cos = findViewById<Button>(view.id)
             if (pantalla.text.toString().isNotEmpty()) {
                 pantalla.setText(cos(pantalla.text.toString().toDouble()).toString())
-                barradeanterior.setText("" + cos)
+                barradeanterior.setText("coseno")
             }
         }
 
