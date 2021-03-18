@@ -8,6 +8,5 @@ Calculadora Cientifica de Kotlin.
 
 ![Landscape](https://github.com/karlistack/Calculadora-Cientifica-Kotlin/blob/master/calculadorLand.png)
 
-bugs, en binario y hexadecimal.
 
 
